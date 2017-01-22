@@ -5,4 +5,4 @@ mkdir ~/bin
 mv ./exercism_client/exercism ~/bin/
 rm ./exercism_client/exercism
 export PATH=$HOME/bin:$PATH
-exercism --version
+echo $(exercism --version)
