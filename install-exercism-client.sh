@@ -1,5 +1,8 @@
-cmd sudo tar -xzvf exercism_linux-64bit.tgz
-cmd sudo mkdir ~/bin
-cmd sudo mv exercism_client/excercism ~/bin/
+#!/bin/bash
+tar -xzvf ./exercism_client/exercism-linux-64bit.tgz -C ./exercism_client/
+rm -rf ~/bin
+mkdir ~/bin
+mv ./exercism_client/exercism ~/bin/
+rm ./exercism_client/exercism
 export PATH=$HOME/bin:$PATH
-cmd sudo exercism --version
+exercism --version
