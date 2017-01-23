@@ -1,2 +1,2 @@
 # learning_elixir
-Learning Elixir via [excercism.io](https://exercism.io) exercises.
+Learning Elixir via [excercism.io](exercism.io) exercises.

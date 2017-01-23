@@ -6,4 +6,3 @@ mv ./exercism_client/exercism ~/bin/
 rm ./exercism_client/exercism
 export PATH=$HOME/bin:$PATH
 exercism configure --key=$EXERCISM_API_KEY
-pwd
