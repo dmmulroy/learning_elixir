@@ -1,6 +1,6 @@
 language: elixir
 elixir:
   - 1.4.0
-sudo: required
-install: true
-script: sudo bash ./install-exercism-client.sh
+# sudo: required
+# install: true
+# script: sudo bash ./install-exercism-client.sh
