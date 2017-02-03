@@ -2,4 +2,4 @@
 
 Learning Elixir via [exercism.io](exercism.io) exercises.
 
-Find my solutions, attempts, and iterations [here](http://exercism.io/dmmulroy).
+Find my solutions, attempts, and iterations [here](http://exercism.io/profiles/dmmulroy/fe6f470590ea418e9a0c927cbced228a).
