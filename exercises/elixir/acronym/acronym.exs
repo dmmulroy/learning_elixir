@@ -5,9 +5,9 @@ defmodule Acronym do
   """
   @spec abbreviate(String.t()) :: String.t()
   def abbreviate(string) do
-    string
-    |> String.upcase
-    |> String.split
-    |> Enum.reduce("", &(&2 <> String.first(&1)))
+    Regex.scan(~r/\p{Lu}|[\p{S}\p{Z}]\p{L}/u, string)
+    |> Enum.flat_map(&(&1))
+    |> Enum.map(&(&1 |> String.trim |> String.upcase))
+    |> Enum.reduce("", &(&2 <> &1))
   end
 end
