@@ -10,5 +10,5 @@ defmodule Acronym do
     |> Enum.reduce("", &(&2 <> &1))
   end
 
-  defp extract_element([head | tail]), do: head
+  defp extract_element([head | _tail]), do: head
 end
