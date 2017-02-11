@@ -10,6 +10,28 @@ defmodule Raindrops do
   """
   @spec convert(pos_integer) :: String.t
   def convert(number) do
+    number |> pling |> plang |> plong
+  end
 
+  defp pling(number) do
+    cond do
+      rem(number, 3) == 0 -> {number, "Pling"}
+      true -> {number, ""}
+    end
+  end
+
+  defp plang({number, string}) do
+    cond do
+      rem(number, 5) == 0 -> {number, string <> "Plang"}
+      true -> {number, string}
+    end
+  end
+
+  defp plong({number, string}) do
+    cond do
+      rem(number, 7) == 0 -> string <> "Plong"
+      string == "" -> Integer.to_string(number)
+      true -> string
+    end
   end
 end
