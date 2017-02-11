@@ -7,8 +7,8 @@ defmodule Acronym do
   def abbreviate(string) do
     Regex.scan(~r/\p{Lu}|[\p{S}\p{Z}]\p{L}/u, string)
     |> Enum.map(&(&1 |> extract_element |> String.trim |> String.upcase))
-    |> Enum.reduce("", &(&2 <> &1))
+    |> Enum.join
   end
 
-  defp extract_element([head | _tail]), do: head
+  defp extract_element([head | tail]), do: head
 end
