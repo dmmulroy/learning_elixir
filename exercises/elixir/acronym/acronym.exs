@@ -6,8 +6,9 @@ defmodule Acronym do
   @spec abbreviate(String.t()) :: String.t()
   def abbreviate(string) do
     Regex.scan(~r/\p{Lu}|[\p{S}\p{Z}]\p{L}/u, string)
-    |> Enum.flat_map(&(&1))
-    |> Enum.map(&(&1 |> String.trim |> String.upcase))
+    |> Enum.map(&(&1 |> extract_element |> String.trim |> String.upcase))
     |> Enum.reduce("", &(&2 <> &1))
   end
+
+  defp extract_element([head | tail]), do: head
 end
